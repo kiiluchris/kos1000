@@ -3,7 +3,7 @@
 
 extern char __bss[], __bss_end[], __stack_top[];
 
-extern char _binary_shell_bin_start[], _binary_shell_bin_size[];
+extern char _binary_build_shell_bin_start[], _binary_build_shell_bin_size[];
 
 extern char __kernel_base[];
 
@@ -697,7 +697,7 @@ void kernel_main(void) {
     idle_process->pid = 0;
     current_process = idle_process;
 
-    create_process(_binary_shell_bin_start, (size_t) _binary_shell_bin_size);
+    create_process(_binary_build_shell_bin_start, (size_t) _binary_build_shell_bin_size);
 
     yield();
 
