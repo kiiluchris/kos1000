@@ -1,0 +1,2 @@
+These are the initial contents of hello.txt. 
+Calling "writefile" will update it.

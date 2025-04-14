@@ -21,7 +21,7 @@ prompt:
         }
 
         if (strcmp(cmdline, "hello") == 0)
-            printf("Hello world from shell!\n");
+            printf("Hello world from shell! Now let's attempt to read from a file.\n");
         else if (strcmp(cmdline, "exit") == 0)
             exit();
         else if (strcmp(cmdline, "readfile") == 0) {
@@ -32,7 +32,8 @@ prompt:
             printf("%s\n", buf);
         }
         else if (strcmp(cmdline, "writefile") == 0) {
-            writefile("hello.txt", "Hello from shell!!\n", 19);
+            /*printf("usage: writefile $TEXT\n");*/
+            writefile("hello.txt", "This is updated text from writing to hello.txt\n", 48);
         }
         else
             printf("unknown command: %s\n", cmdline);
